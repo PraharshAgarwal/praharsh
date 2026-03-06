@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praharsh Agarwal – Full-Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Praharsh Agarwal – B.Tech CSE student at VIT, full-stack developer skilled in C++, Java, Python, JavaScript, TypeScript, Kotlin, Node.js, and PostgreSQL.">
+
+    <!-- Open Graph / SEO Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Praharsh Agarwal – Full-Stack Developer">
+    <meta property="og:description"
+        content="B.Tech CSE student at VIT building full-stack web apps with modern technologies. Check out my projects, skills, and experience.">
+    <meta property="og:image" content="profile.jpg">
+    <meta property="og:url" content="https://praharshagarwal.github.io/praharsh/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Praharsh Agarwal – Full-Stack Developer">
+    <meta name="twitter:description"
+        content="B.Tech CSE student at VIT building full-stack web apps with modern technologies.">
+    <meta name="twitter:image" content="profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-theme="dark" class="page-loading">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">PA.</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">☀️</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Open to opportunities
+                </div>
+                <h1>
+                    Hi, I'm<br>
+                    <span class="gradient-text">Praharsh Agarwal</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I'm a&nbsp;<span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+                </p>
+                <p class="hero-subtitle-static">
+                    Building smart, scalable web apps with modern frameworks, robust databases, and clean architecture.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects →</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3><span class="stat-number" data-target="9.32" data-decimals="2">0</span></h3>
+                        <p>CGPA (Sem 3)</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span></h3>
+                        <p>Projects Built</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span></h3>
+                        <p>Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Building things that matter</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="profile.jpg" alt="Praharsh Agarwal">
+                </div>
+                <div class="about-text reveal reveal-delay-1">
+                    <h3>CS Undergrad &amp; Full-Stack Developer</h3>
+                    <p>
+                        I'm Praharsh Agarwal, a B.Tech Computer Science student at Vellore Institute of Technology with
+                        a 9.32 CGPA. I'm passionate about building full-stack web applications that solve real-world
+                        problems: from personal finance trackers to banking systems to flight booking platforms.
+                    </p>
+                    <p>
+                        I thrive on turning ideas into production-ready code using modern technologies like Next.js,
+                        NestJS, Flask, and PostgreSQL. When I'm not coding, I'm coordinating large-scale campus events
+                        as part of the FYI Operations Team.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="about-info-item">
+                            <div class="label">University</div>
+                            <div class="value">VIT, Chennai</div>
+                        </div>
+                        <div class="about-info-item">
+                            <div class="label">Degree</div>
+                            <div class="value">B.Tech CSE</div>
+                        </div>
+                        <div class="about-info-item">
+                            <div class="label">Batch</div>
+                            <div class="value">2024 – 2028</div>
+                        </div>
+                        <div class="about-info-item">
+                            <div class="label">Email</div>
+                            <div class="value">agarwalpraharsh@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blob Divider -->
+    <div class="blob-divider">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">My Technical Toolkit</h2>
+                <p class="section-desc">A growing arsenal of languages, frameworks, databases, and tools I use to build.
+                </p>
+            </div>
+        </div>
+
+        <!-- Marquee Row 1: Languages → scrolls left -->
+        <div class="marquee-row reveal">
+            <div class="marquee-label lang">Languages</div>
+            <div class="marquee-track" data-direction="left">
+                <div class="marquee-content">
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++"> C++</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"> C
+                    </div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            alt="Java"> Java</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                            alt="Python"> Python</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"> JavaScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                            alt="TypeScript"> TypeScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                            alt="Kotlin"> Kotlin</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++"> C++</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"> C
+                    </div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            alt="Java"> Java</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                            alt="Python"> Python</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"> JavaScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                            alt="TypeScript"> TypeScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                            alt="Kotlin"> Kotlin</div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++"> C++</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"> C
+                    </div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            alt="Java"> Java</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                            alt="Python"> Python</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"> JavaScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                            alt="TypeScript"> TypeScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                            alt="Kotlin"> Kotlin</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++"> C++</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"> C
+                    </div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            alt="Java"> Java</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                            alt="Python"> Python</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"> JavaScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                            alt="TypeScript"> TypeScript</div>
+                    <div class="skill-chip lang"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                            alt="Kotlin"> Kotlin</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee Row 2: Frameworks & Databases → scrolls right -->
+        <div class="marquee-row reveal reveal-delay-1">
+            <div class="marquee-label framework">Frameworks & Databases</div>
+            <div class="marquee-track" data-direction="right">
+                <div class="marquee-content">
+                    <div class="skill-chip framework"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL"> PostgreSQL</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                            alt="Oracle"> Oracle</div>
+                    <div class="skill-chip framework"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL"> PostgreSQL</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                            alt="Oracle"> Oracle</div>
+                    <div class="skill-chip framework"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL"> PostgreSQL</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                            alt="Oracle"> Oracle</div>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="skill-chip framework"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL"> PostgreSQL</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                            alt="Oracle"> Oracle</div>
+                    <div class="skill-chip framework"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL"> PostgreSQL</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                            alt="Oracle"> Oracle</div>
+                    <div class="skill-chip framework"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL"> PostgreSQL</div>
+                    <div class="skill-chip db"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"
+                            alt="Oracle"> Oracle</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee Row 3: Tools & Concepts → scrolls left -->
+        <div class="marquee-row reveal reveal-delay-2">
+            <div class="marquee-label tool">Tools & Concepts</div>
+            <div class="marquee-track" data-direction="left">
+                <div class="marquee-content">
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git"> Git</div>
+                    <div class="skill-chip tool"><img class="skill-icon"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                            alt="Machine Learning"> Machine Learning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blob Divider -->
+    <div class="blob-divider">
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Things I've Built</h2>
+                <p class="section-desc">A selection of projects that showcase my skills across the full stack.</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- ArthIQ -->
+                <div class="project-card reveal">
+                    <div class="project-card-header">
+                        <div class="project-icon">💰</div>
+                        <span class="project-date">Feb 2026</span>
+                    </div>
+                    <h3>ArthIQ</h3>
+                    <span class="project-subtitle">Smart Personal Finance Tracker</span>
+                    <p>A responsive SPA for personal finance tracking with a custom client-side router, lazy-loaded
+                        modules for 7 views, an interactive multi-month analytics dashboard, and Web Storage API state
+                        management.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3</span>
+                        <span class="project-tag">SPA</span>
+                    </div>
+                    <a href="https://github.com/PraharshAgarwal/ArthIQ" class="project-link" target="_blank"
+                        rel="noopener">View on GitHub →</a>
+                </div>
+
+                <!-- TravelApp -->
+                <div class="project-card reveal reveal-delay-1">
+                    <div class="project-card-header">
+                        <div class="project-icon">✈️</div>
+                        <span class="project-date">Jan 2026</span>
+                    </div>
+                    <h3>TravelApp</h3>
+                    <span class="project-subtitle">Flight Booking Platform</span>
+                    <p>Full-stack travel booking platform for students built with Next.js, NestJS, and PostgreSQL.
+                        Features a scalable REST API with complex search, multi-modal booking workflows, and Razorpay
+                        payment integration.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">NestJS</span>
+                        <span class="project-tag">PostgreSQL</span>
+                        <span class="project-tag">Razorpay</span>
+                    </div>
+                    <a href="https://github.com/PraharshAgarwal/TravelApp" class="project-link" target="_blank"
+                        rel="noopener">View on GitHub →</a>
+                </div>
+
+                <!-- SecureBank -->
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-card-header">
+                        <div class="project-icon">🏦</div>
+                        <span class="project-date">Jan 2026</span>
+                    </div>
+                    <h3>SecureBank</h3>
+                    <span class="project-subtitle">Banking Management System</span>
+                    <p>Full-stack banking app with Flask and PostgreSQL featuring a BCNF-compliant schema,
+                        ACID-compliant fund transfers with row-level locking, B+ tree indexing, Materialized Views, and
+                        automated audit logs.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">PostgreSQL</span>
+                        <span class="project-tag">SQL</span>
+                    </div>
+                    <a href="https://github.com/PraharshAgarwal/SecureBank" class="project-link" target="_blank"
+                        rel="noopener">View on GitHub →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Blob Divider -->
+    <div class="blob-divider">
+        <div class="blob blob-5"></div>
+        <div class="blob blob-6"></div>
+    </div>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Education</span>
+                <h2 class="section-title">Academic Journey</h2>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 – 2028</span>
+                        <h3>B.Tech – Computer Science &amp; Engineering</h3>
+                        <p class="institution">Vellore Institute of Technology, Chennai</p>
+                        <p class="detail">CGPA: 9.32 (till Semester 3)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
+                        <h3>AISSCE (Class XII)</h3>
+                        <p class="institution">Amity International School, Mayur Vihar, Delhi</p>
+                        <p class="detail">Aggregate: 90%</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022</span>
+                        <h3>AISSE (Class X)</h3>
+                        <p class="institution">Birla Vidya Mandir, Nainital, India</p>
+                        <p class="detail">Aggregate: 90%</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Where I've Contributed</h2>
+            </div>
+            <div class="experience-card reveal">
+                <div class="experience-header">
+                    <div>
+                        <h3>Fraternity of Young Innovators (FYI)</h3>
+                        <span class="role">Operations Team</span>
+                    </div>
+                    <span class="experience-date">Apr 2025 – Present</span>
+                </div>
+                <ul class="experience-list">
+                    <li>Coordinated logistics and on-ground execution for large-scale college events and innovation
+                        challenges.</li>
+                    <li>Managed crowd flow, scheduling, and cross-team coordination to ensure smooth execution of events
+                        with 1800+ participants.</li>
+                    <li>Collaborated with marketing and creatives teams to support promotional campaigns, increasing
+                        event visibility and participation.</li>
+                    <li>Helped organize interactive events focused on innovation, problem-solving, and entrepreneurship,
+                        strengthening the campus community.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-desc">Have a project in mind or just want to chat? Reach out!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-text reveal">
+                    <h3>Get in Touch</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                        something great.</p>
+                    <div class="contact-links">
+                        <a href="mailto:agarwalpraharsh@gmail.com" class="contact-link-item">
+                            <div class="contact-link-icon">✉️</div>
+                            <div class="contact-link-info">
+                                <div class="link-label">Email</div>
+                                <div class="link-value">agarwalpraharsh@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/praharshagarwal" target="_blank" rel="noopener"
+                            class="contact-link-item">
+                            <div class="contact-link-icon">💻</div>
+                            <div class="contact-link-info">
+                                <div class="link-label">GitHub</div>
+                                <div class="link-value">praharshagarwal</div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/praharshagrwal" target="_blank" rel="noopener"
+                            class="contact-link-item">
+                            <div class="contact-link-icon">🔗</div>
+                            <div class="contact-link-info">
+                                <div class="link-label">LinkedIn</div>
+                                <div class="link-value">praharshagrwal</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal reveal-delay-1" id="contactForm">
+                    <!-- Web3Forms Config -->
+                    <input type="hidden" name="access_key" value="ad771cda-6b73-4727-b6e9-d1eecf6b845f">
+                    <input type="hidden" name="subject" value="New Portfolio Contact">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <input type="checkbox" name="botcheck" style="display: none;">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required id="contact-name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required id="contact-email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" id="contact-subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message..." required id="contact-message"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="contact-submit">Send Message →</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-text">&copy; 2026 Praharsh Agarwal. Built with ❤️</span>
+            <div class="footer-links">
+                <a href="https://github.com/PraharshAgarwal" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/praharshagrwal" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:agarwalpraharsh@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
