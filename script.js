@@ -76,18 +76,15 @@ backToTop.addEventListener('click', () => {
 
 // ===== DARK/LIGHT THEME TOGGLE =====
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('.theme-icon');
 
 // Check saved preference
 const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
 document.body.setAttribute('data-theme', savedTheme);
-themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
 themeToggle.addEventListener('click', () => {
   const current = document.body.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.body.setAttribute('data-theme', next);
-  themeIcon.textContent = next === 'dark' ? '☀️' : '🌙';
   localStorage.setItem('portfolio-theme', next);
 });
 
