@@ -1,12 +1,20 @@
+// ===== CURSOR GLOW =====
+const cursorGlow = document.getElementById('cursorGlow');
+let mouseX = 0, mouseY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorGlow.style.left = mouseX + 'px';
+  cursorGlow.style.top = mouseY + 'px';
+});
+
 // ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY > 50;
-  navbar.classList.toggle('scrolled', scrolled);
-
-  // Back to top visibility
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
   backToTop.classList.toggle('visible', window.scrollY > 500);
 });
 
@@ -19,7 +27,6 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -40,9 +47,7 @@ function highlightNav() {
     if (scrollY >= top && scrollY < top + height) {
       navAnchors.forEach(a => {
         a.classList.remove('active');
-        if (a.getAttribute('href') === '#' + id) {
-          a.classList.add('active');
-        }
+        if (a.getAttribute('href') === '#' + id) a.classList.add('active');
       });
     }
   });
@@ -50,21 +55,16 @@ function highlightNav() {
 
 window.addEventListener('scroll', highlightNav);
 
-// ===== SCROLL REVEAL (Intersection Observer) =====
+// ===== SCROLL REVEAL =====
 const revealElements = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   },
-  {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  }
+  { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
 );
 
 revealElements.forEach(el => revealObserver.observe(el));
@@ -72,20 +72,6 @@ revealElements.forEach(el => revealObserver.observe(el));
 // ===== BACK TO TOP =====
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ===== DARK/LIGHT THEME TOGGLE =====
-const themeToggle = document.getElementById('themeToggle');
-
-// Check saved preference
-const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-document.body.setAttribute('data-theme', savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const current = document.body.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  document.body.setAttribute('data-theme', next);
-  localStorage.setItem('portfolio-theme', next);
 });
 
 // ===== TYPING ANIMATION =====
@@ -98,10 +84,7 @@ const phrases = [
   'Database Enthusiast.',
 ];
 
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 80;
+let phraseIndex = 0, charIndex = 0, isDeleting = false, typingSpeed = 80;
 
 function typeEffect() {
   const currentPhrase = phrases[phraseIndex];
@@ -117,7 +100,6 @@ function typeEffect() {
   }
 
   if (!isDeleting && charIndex === currentPhrase.length) {
-    // Pause at end of phrase
     typingSpeed = 2000;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
@@ -129,7 +111,6 @@ function typeEffect() {
   setTimeout(typeEffect, typingSpeed);
 }
 
-// Start typing
 typeEffect();
 
 // ===== CONTACT FORM (Web3Forms) =====
@@ -139,10 +120,8 @@ const submitBtn = document.getElementById('contact-submit');
 
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-
-  // Show loading state
-  const originalText = submitBtn.textContent;
-  submitBtn.textContent = 'Sending...';
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = 'Sending...';
   submitBtn.disabled = true;
   formStatus.className = 'form-status';
   formStatus.textContent = '';
@@ -150,13 +129,11 @@ contactForm.addEventListener('submit', async (e) => {
   try {
     const formData = new FormData(contactForm);
     const json = Object.fromEntries(formData);
-
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(json)
     });
-
     const result = await response.json();
 
     if (result.success) {
@@ -172,14 +149,9 @@ contactForm.addEventListener('submit', async (e) => {
     formStatus.textContent = '❌ Network error. Please try again or email me directly.';
   }
 
-  submitBtn.textContent = originalText;
+  submitBtn.innerHTML = originalText;
   submitBtn.disabled = false;
-
-  // Auto-hide status after 5 seconds
-  setTimeout(() => {
-    formStatus.textContent = '';
-    formStatus.className = 'form-status';
-  }, 5000);
+  setTimeout(() => { formStatus.textContent = ''; formStatus.className = 'form-status'; }, 5000);
 });
 
 // ===== SCROLL PROGRESS BAR =====
@@ -188,14 +160,13 @@ const scrollProgress = document.getElementById('scrollProgress');
 function updateScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = (scrollTop / docHeight) * 100;
-  scrollProgress.style.width = progress + '%';
+  scrollProgress.style.width = (scrollTop / docHeight) * 100 + '%';
 }
 
 window.addEventListener('scroll', updateScrollProgress);
 
 // ===== ANIMATED STATS COUNTER =====
-const statNumbers = document.querySelectorAll('.stat-number');
+const statNumbers = document.querySelectorAll('.stat-val');
 
 function animateCounter(el) {
   const target = parseFloat(el.dataset.target);
@@ -206,42 +177,133 @@ function animateCounter(el) {
   function updateCount(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-
-    // Ease out cubic
     const eased = 1 - Math.pow(1 - progress, 3);
-    const current = eased * target;
-
-    el.textContent = current.toFixed(decimals);
-
-    if (progress < 1) {
-      requestAnimationFrame(updateCount);
-    }
+    el.textContent = (eased * target).toFixed(decimals);
+    if (progress < 1) requestAnimationFrame(updateCount);
   }
 
   requestAnimationFrame(updateCount);
 }
 
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        statNumbers.forEach(el => animateCounter(el));
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
+// Start counters after page load with a small delay
+setTimeout(() => {
+  statNumbers.forEach(el => animateCounter(el));
+}, 1500);
 
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) {
-  // Delay counter start to sync with hero stagger animation
-  setTimeout(() => {
-    statNumbers.forEach(el => animateCounter(el));
-  }, 1500);
-}
+// ===== SKILL PILL TILT EFFECT =====
+document.querySelectorAll('.skill-pill').forEach(pill => {
+  pill.addEventListener('mousemove', (e) => {
+    const rect = pill.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 10;
+    const rotateY = (centerX - x) / 10;
+    pill.style.transform = `translateY(-4px) scale(1.03) perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
 
-// ===== PAGE LOAD ANIMATION =====
+  pill.addEventListener('mouseleave', () => {
+    pill.style.transform = '';
+  });
+});
+
+// ===== PAGE LOAD =====
 window.addEventListener('load', () => {
   document.body.classList.remove('page-loading');
 });
+
+// ===== HERO PARALLAX ON SCROLL =====
+const heroVisual = document.querySelector('.hero-visual');
+const heroContent = document.querySelector('.hero-content');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  if (scrollY < window.innerHeight) {
+    const factor = scrollY * 0.3;
+    if (heroVisual) heroVisual.style.transform = `translateY(${factor * 0.5}px) rotate(${1 - scrollY * 0.002}deg)`;
+    if (heroContent) heroContent.style.transform = `translateY(${factor * 0.15}px)`;
+  }
+});
+
+// ===== MAGNETIC HOVER ON PROJECT CARDS =====
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const moveX = (x - centerX) / 30;
+    const moveY = (y - centerY) / 30;
+    card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+
+// ===== SKILLS STAGGER OBSERVER =====
+const skillsOrbit = document.querySelector('.skills-orbit');
+if (skillsOrbit) {
+  const skillsObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        skillsObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  skillsObs.observe(skillsOrbit);
+}
+
+// ===== SMOOTH CARD FOCUS GLOW =====
+document.querySelectorAll('.stat-chip, .edu-content, .contact-chip').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    el.style.transition = 'all 0.3s cubic-bezier(0.4,0,0.2,1)';
+  });
+});
+
+// ===== SCROLL INDICATOR FADE =====
+const scrollIndicator = document.getElementById('scrollIndicator');
+if (scrollIndicator) {
+  window.addEventListener('scroll', () => {
+    const opacity = Math.max(0, 1 - window.scrollY / 300);
+    scrollIndicator.style.opacity = opacity;
+    if (window.scrollY > 300) {
+      scrollIndicator.style.pointerEvents = 'none';
+    } else {
+      scrollIndicator.style.pointerEvents = 'auto';
+    }
+  });
+}
+
+// ===== SOCIAL ICON MAGNETIC HOVER =====
+document.querySelectorAll('.social-icon').forEach(icon => {
+  icon.addEventListener('mousemove', (e) => {
+    const rect = icon.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    icon.style.transform = `translateY(-3px) translate(${x * 0.3}px, ${y * 0.3}px)`;
+  });
+
+  icon.addEventListener('mouseleave', () => {
+    icon.style.transform = '';
+  });
+});
+
+// ===== ABOUT IMAGE PARALLAX TILT =====
+const imgFrame = document.querySelector('.img-frame');
+if (imgFrame) {
+  imgFrame.addEventListener('mousemove', (e) => {
+    const rect = imgFrame.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    imgFrame.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale(1.02)`;
+  });
+
+  imgFrame.addEventListener('mouseleave', () => {
+    imgFrame.style.transform = '';
+  });
+}
