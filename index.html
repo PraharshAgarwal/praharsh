@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
     <title>Praharsh Agarwal – Full-Stack Developer</title>
     <meta name="description"
         content="Portfolio of Praharsh Agarwal – B.Tech CSE student at VIT, full-stack developer skilled in C++, Java, Python, JavaScript, TypeScript, Kotlin, Node.js, and PostgreSQL.">
@@ -16,12 +20,87 @@
         content="B.Tech CSE student at VIT building full-stack web apps with modern technologies. Check out my projects, skills, and experience.">
     <meta property="og:image" content="https://praharshagarwal.in/assets/profile.jpg">
     <meta property="og:url" content="https://praharshagarwal.in/">
-    <meta name="twitter:image" content="https://praharshagarwal.in/assets/profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Praharsh Agarwal – Full-Stack Developer">
     <meta name="twitter:description"
         content="B.Tech CSE student at VIT building full-stack web apps with modern technologies.">
-    <meta name="twitter:image" content="assets/profile.jpg">
+    <meta name="twitter:image" content="https://praharshagarwal.in/assets/profile.jpg">
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+        "@type": "Person",
+        "@id": "https://praharshagarwal.in/#person",
+        "name": "Praharsh Agarwal",
+        "url": "https://praharshagarwal.in/",
+        "image": "https://praharshagarwal.in/assets/profile.jpg",
+        "jobTitle": "Full-Stack Developer",
+        "description": "B.Tech CSE student at VIT Chennai specialising in Next.js, NestJS, Flask, and PostgreSQL.",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Vellore Institute of Technology",
+            "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressCountry": "IN"
+            }
+        },
+        "knowsAbout": [
+            "Next.js",
+            "NestJS",
+            "Flask",
+            "PostgreSQL",
+            "TypeScript",
+            "JavaScript",
+            "Node.js",
+            "Python",
+            "Java",
+            "C++",
+            "REST APIs",
+            "Full Stack Development",
+            "Backend Development"
+        ],
+        "sameAs": [
+            "https://github.com/praharshagarwal",
+            "https://www.linkedin.com/in/praharshagarwal/"
+        ]
+        },
+        {
+        "@type": "WebSite",
+        "@id": "https://praharshagarwal.in/#website",
+        "url": "https://praharshagarwal.in/",
+        "name": "Praharsh Agarwal — Full-Stack Developer",
+        "author": { "@id": "https://praharshagarwal.in/#person" }
+        },
+        {
+        "@type": "ItemList",
+        "name": "Projects by Praharsh Agarwal",
+        "itemListElement": [
+            {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ArthIQ — Personal Finance Tracker",
+            "url": "https://github.com/PraharshAgarwal/ArthIQ/"
+            },
+            {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "TravelApp — Flight Booking Platform",
+            "url": "https://github.com/PraharshAgarwal/TravelApp/"
+            },
+            {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SecureBank — Banking Management System",
+            "url": "https://github.com/PraharshAgarwal/SecureBank/"
+            }
+        ]
+        }
+    ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -360,10 +439,13 @@
                         </div>
                         <h3>ArthIQ</h3>
                         <span class="project-subtitle">Smart Personal Finance Tracker</span>
-                        <p>A responsive SPA for personal finance tracking with a custom client-side router, lazy-loaded
+                        <p>Responsive personal finance tracking SPA built with a custom client-side router, lazy-loaded
+                            modules, and Web Storage API state management. Features an interactive multi-month analytics
+                            dashboard for tracking spending trends and financial insights.</p>
+                        <!-- <p>A responsive SPA for personal finance tracking with a custom client-side router, lazy-loaded
                             modules for 7 views, an interactive multi-month analytics dashboard, and Web Storage API
                             state
-                            management.</p>
+                            management.</p> -->
                         <div class="project-tags">
                             <span class="project-tag">JavaScript</span>
                             <span class="project-tag">HTML5</span>
@@ -385,9 +467,12 @@
                         <h3>TravelApp</h3>
                         <span class="project-subtitle">Flight Booking Platform</span>
                         <p>Full-stack travel booking platform for students built with Next.js, NestJS, and PostgreSQL.
+                            Features scalable REST APIs, advanced search and booking workflows, secure Razorpay payment
+                            integration, and a responsive modern UI.</p>
+                        <!-- <p>Full-stack travel booking platform for students built with Next.js, NestJS, and PostgreSQL.
                             Features a scalable REST API with complex search, multi-modal booking workflows, and
                             Razorpay
-                            payment integration.</p>
+                            payment integration.</p> -->
                         <div class="project-tags">
                             <span class="project-tag">Next.js</span>
                             <span class="project-tag">NestJS</span>
@@ -408,10 +493,12 @@
                         </div>
                         <h3>SecureBank</h3>
                         <span class="project-subtitle">Banking Management System</span>
-                        <p>Full-stack banking app with Flask and PostgreSQL featuring a BCNF-compliant schema,
+                        <p>Full-stack banking application built with Flask and PostgreSQL featuring a BCNF-compliant
+                            relational schema, ACID-compliant fund transfers with row-level locking, B+ tree indexing
+                            for optimized queries, materialized views, and automated audit logging.</p>
+                        <!-- <p>Full-stack banking app with Flask and PostgreSQL featuring a BCNF-compliant schema,
                             ACID-compliant fund transfers with row-level locking, B+ tree indexing, Materialized Views,
-                            and
-                            automated audit logs.</p>
+                            and automated audit logs.</p> -->
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
                             <span class="project-tag">Flask</span>
