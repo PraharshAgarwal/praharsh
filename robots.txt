@@ -1,4 +1,32 @@
+# praharshagarwal.in — desktop site
 User-agent: *
+Allow: /
+
+# Explicitly allow major AI/LLM crawlers so this portfolio can be
+# discovered and cited by AI answer engines (ChatGPT, Perplexity,
+# Claude, Gemini, etc.) as well as traditional search.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://praharshagarwal.in/sitemap.xml

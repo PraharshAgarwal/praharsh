@@ -1,0 +1,36 @@
+# Praharsh Agarwal
+
+> Full-stack developer and B.Tech CSE student at Vellore Institute of Technology (VIT), Chennai (2024–2028). Builds full-stack web and mobile applications using Next.js, NestJS, Flask, and PostgreSQL.
+
+Praharsh Agarwal is a computer science undergraduate and freelance full-stack developer based in India. He works across the stack with Next.js, NestJS, Flask, PostgreSQL, TypeScript, Kotlin, and Python, and takes on professional freelance web development projects alongside his studies. He is also involved with FYI (Fraternity of Young Innovators), a student organization, currently as Curation Lead on its Core Committee.
+
+## Profile
+
+- Name: Praharsh Agarwal
+- Role: Full-Stack Developer / B.Tech CSE Student
+- Education: B.Tech, Computer Science & Engineering, Vellore Institute of Technology (VIT), Chennai (2024–2028)
+- Website: https://praharshagarwal.in/
+- GitHub: https://github.com/PraharshAgarwal
+- LinkedIn: https://www.linkedin.com/in/praharshagarwal/
+- Resume: https://praharshagarwal.in/assets/resume.pdf
+
+## Skills
+
+Languages: C++, Java, Python, JavaScript, TypeScript, Kotlin, C
+Frameworks & Databases: Next.js, NestJS, Flask, Node.js, PostgreSQL, Oracle
+Tools & Concepts: Git, REST APIs, Machine Learning, Android Development
+
+## Projects
+
+- [ArthIQ](https://github.com/PraharshAgarwal/ArthIQ/): Smart personal finance tracker built as a single-page application with JavaScript, HTML5, and CSS3.
+- [TravelApp](https://github.com/PraharshAgarwal/TravelApp/): Flight booking platform built with Next.js, NestJS, PostgreSQL, and Razorpay payment integration.
+- [SecureBank](https://github.com/PraharshAgarwal/SecureBank/): BCNF-compliant banking management system with a Python/Flask backend, PostgreSQL database, and Android client.
+
+## Experience
+
+- Curation Lead, Core Committee — Fraternity of Young Innovators (FYI), April 2026–Present
+- Operations Team — Fraternity of Young Innovators (FYI), April 2025–March 2026
+
+## Contact
+
+Email: agarwalpraharsh@gmail.com
